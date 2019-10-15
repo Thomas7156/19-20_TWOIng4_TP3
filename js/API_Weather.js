@@ -14,11 +14,9 @@ const API_URL_ICON = "http://openweathermap.org/img/wn/";
 ///////////////API 16 VILLES//////////////////
 // ///////////////////////////////////////////
 // Clé api
-const API_KEY = "4081444b7b90198136fefe6ed4ccf35b";
+const API_KEY2 = "4081444b7b90198136fefe6ed4ccf35b";
 // Url API
-const API_URL = "https://api.openweathermap.org/data/2.5/weather";
-// Base source icon
-const API_URL_ICON = "http://openweathermap.org/img/wn/";
+const API_URL2 = "https://api.openweathermap.org/data/2.5/forecast/daily";
 
 
 class API_WEATHER{
@@ -38,9 +36,10 @@ class API_WEATHER{
       crossdomain: true
     })
   }
+  //Requête pour 16 villes
   getThreeDayForecast(){
     return axios
-    .get(`${API_URL}?q=${this.city}&units=metric&appid=${API_KEY}`, {
+    .get(`${API_URL2}?q=${this.city}&units=metric&appid=${API_KEY2}`, {
       crossdomain: true
     })
   }
