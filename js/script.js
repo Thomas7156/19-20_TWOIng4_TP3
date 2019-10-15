@@ -92,11 +92,12 @@ function nextdays(apiWeather) {
     ////////////////////////////////////
     // V2
     // //////////////////////////////////
-    data.list.foreach(function (day, index) {
-      const main = day[index].weather[0].main;
-      const description = day[index].weather[0].description;
-      const temp = day[index].temp.day;
-      const icon = apiWeather.getHTMLElementFromIcon(day[index].weather[0].icon);
+    data.list.forEach(function (day, index) {
+
+      const main = day.weather[0].main;
+      const description = day.weather[0].description;
+      const temp = day.temp.day;
+      const icon = apiWeather.getHTMLElementFromIcon(day.weather[0].icon);
 
       document.getElementById(`${index}-forecast-main`).innerHTML = main;
       document.getElementById(`${index}-forecast-more-info`).innerHTML = description;
